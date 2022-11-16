@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+.login-box{
+
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo-bar{
+
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu-bar{
+    display: flex;
+    justify-content: space-between;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.menu-box{
+
+    display: flex;
+    list-style-type: none;
 }
 
-.App-link {
-  color: #61dafb;
+.menu-box li{
+
+    padding-left: 20px;
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-box{
+    line-height: 50px;
+    align-items: center;
+    border-bottom: 2px solid black;
+}
+
+.search-bar{
+    border: none;
+}
+
+.img-style{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Detail-new{
+    color: brown;
+    font-weight: bold;
+}
+
+.Detail-title{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(78, 61, 61);
+}
+
+.Detail-size{
+    width: 100px; height: 30px;
+    text-align: center;
+    border-radius: 10px;
+    color: rgb(113, 78, 78);
+}
+
+.Detail-button{
+    margin-top: 50px;
+    width: 500px; height: 50px;
+    background-color: tomato;
+    text-align: center;
+    line-height: 50px;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.Detail-button:hover{
+    background-color: darkorange;
 }
