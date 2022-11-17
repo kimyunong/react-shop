@@ -4,23 +4,13 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom'; // url을 바꿔준다
  
-const Navbar = ( {authenticate} ) => {
+const Navbar = ( {authenticate,setAuthenticate} ) => {
 
   const menuList = ['여성','Divided','남성','신생아/유아','아동','H&M HOME','스포츠','Sale','지속가능성','기타'];
   
   const navigate = useNavigate();
 
   console.log("로그",authenticate);
-
-  const gotoLogin=()=>{
-
-    if(authenticate==false){
-      navigate('/login')
-    }else{
-      
-    }
-  
-  }
 
   const gotoHome=()=>{
     navigate('/');
@@ -43,9 +33,15 @@ const Navbar = ( {authenticate} ) => {
     <div>
         
       <div>
-        <div className='login-box' onClick={gotoLogin}><FontAwesomeIcon icon={faUser}/>
-          { authenticate == false? "login" : "logout" }
-        </div>
+
+      { authenticate? (
+        <div className='login-box' onClick={()=> setAuthenticate(false)}><FontAwesomeIcon icon={faUser}/>logout
+          </div>
+      ):(
+        <div className='login-box' onClick={()=> navigate("/login")}><FontAwesomeIcon icon={faUser}/>login
+          </div>
+      ) }
+        
       </div>
       
       <div className='logo-bar' onClick={gotoHome}>

@@ -32,7 +32,7 @@ function App() {
     
     <div>
 
-      <Navbar authenticate={authenticate} />
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} />
       
       <Routes>
 
